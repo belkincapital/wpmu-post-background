@@ -86,7 +86,7 @@ add_action( 'save_post', 'wpmupbi_meta_save' );
 function wpmupbi_admin_styles(){
     global $typenow;
     if( $typenow == 'post' ) {
-        wp_enqueue_style( 'wpmupbi_meta_box_styles', plugin_dir_url( __FILE__ ) . 'meta-box-styles.css' );
+        wp_enqueue_style( 'wpmupbi_meta_box_styles', plugin_dir_url( __FILE__ ) . 'wpmu-post-background.css' );
     }
 }
 add_action( 'admin_print_styles', 'wpmupbi_admin_styles' );
@@ -100,7 +100,7 @@ function wpmupbi_image_enqueue() {
         wp_enqueue_media();
  
         /* Registers and enqueues the required javascript */
-        wp_register_script( 'meta-box-image', plugin_dir_url( __FILE__ ) . 'meta-box-image.js', array( 'jquery' ) );
+        wp_register_script( 'meta-box-image', plugin_dir_url( __FILE__ ) . 'wpmu-post-background.js', array( 'jquery' ) );
         wp_localize_script( 'meta-box-image', 'meta_image',
             array(
                 'title' => __( 'Choose or Upload Image', 'wpmupbi-textdomain' ),

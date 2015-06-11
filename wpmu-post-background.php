@@ -5,7 +5,7 @@
     Description: Places a meta box on the posts editor screen and allows you to use a custom background image for each post or page.
     Author: Jason Jersey
     Author URI: https://www.twitter.com.com/degersey
-    Version: 1.0
+    Version: 1.0.1
     License: GNU General Public License 2.0 
     License URI: http://www.gnu.org/licenses/gpl-2.0.txt
     
@@ -36,8 +36,7 @@ if ( ! defined( 'ABSPATH' ) ) die('Uh Oh!');
  */
 function wpmupbi_custom_meta() {
     add_meta_box( 'wpmupbi_meta', __( 'Post Background', 'wpmupbi-textdomain' ), 'wpmupbi_meta_callback', 'post', 'side' );
-    add_meta_box( 'wpmupbi_meta', __( 'Post Background', 'wpmupbi-textdomain' ), 'wpmupbi_meta_callback', 'video', 'side' );
-    add_meta_box( 'wpmupbi_meta', __( 'Post Background', 'wpmupbi-textdomain' ), 'wpmupbi_meta_callback', 'image', 'side' );
+    add_meta_box( 'wpmupbi_meta', __( 'Post Background', 'wpmupbi-textdomain' ), 'wpmupbi_meta_callback', 'page', 'side' );
 }
 add_action( 'add_meta_boxes', 'wpmupbi_custom_meta' );
 
